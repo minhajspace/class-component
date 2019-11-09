@@ -5,6 +5,6 @@ import App from "./App";
 import Student from "./App";
 
 ReactDOM.render(
-  <Student name="minhaj" city="lucknow" age="23" hobby="cricket" />,
+  <Student name="urooj" city="lucknow" age="19" hobby="badminton" />,
   document.getElementById("root")
 );

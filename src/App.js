@@ -33,14 +33,9 @@ class Student extends React.Component {
     city: this.props.city,
     hobby: this.props.hobby
   };
-
+  // second method user it accept function in aurgment
   handleClick = () => {
-    this.setState({
-      name: "urooj",
-      age: 22,
-      city: "Lucknow",
-      hobby: "cricket"
-    });
+    this.setState((state, props) => {});
   };
 
   render() {
