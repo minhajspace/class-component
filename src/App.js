@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// class Student extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       name: "rahul",
+//       roll: this.props.roll
+//     };
+//   }
+//   handleClick = () => {
+//     this.setState({ name: "minhaj", roll: 202 });
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <h1>
+//           {" "}
+//           my name is {this.state.name} amd my roll number is {this.state.roll}
+//         </h1>
+//         <button onClick={this.handleClick}>Click Me</button>
+//       </div>
+//     );
+//   }
+// }
+
+class Student extends React.Component {
+  state = {
+    name: this.props.name,
+    age: this.props.age,
+    city: this.props.city,
+    hobby: this.props.hobby
+  };
+
+  handleClick = () => {
+    this.setState({
+      name: "urooj",
+      age: 22,
+      city: "Lucknow",
+      hobby: "cricket"
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>
+          my name is {this.state.name} and i belong to {this.state.city}. and i
+          am {this.state.age} i love to play {this.state.hobby}
+          <button onClick={this.handleClick}>
+            Click here to change the name
+          </button>
+        </h1>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Student;
